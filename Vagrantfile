@@ -35,11 +35,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         chef.cookbooks_path = "recipes/cookbooks"
         chef.roles_path = "recipes/roles"
         chef.add_recipe "apt"
+        chef.add_recipe "apache2"
+        chef.add_recipe "apache2::mod_php5"
+        chef.add_recipe "apache2::mod_rewrite"
         chef.add_recipe "mytest"
         # chef.add_role "web"
 
         # You may also specify custom JSON attributes:
-        chef.json = { :mysql_password => "foo" }
+        chef.json = {
+            :apache => {
+                :listen_ports => [ 80 ]
+            }
+        }
     end
 
 end
