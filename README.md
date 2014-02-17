@@ -1,7 +1,7 @@
 ChefSolo
 ========
 
-This is a minimalistic Vagrant project that creates a single page web app. The main purpose is to demonstrate
+This is a bare minimum Vagrant project that creates a single page web app. The main purpose is to demonstrate
 how a working project can be created with minimum set of recipes.
 
 App is deployed using Chef Solo. It will install apache and php5 and create/enable a virtual host which can be
@@ -11,8 +11,8 @@ Details
 -------
 
 This app uses two standard Opscode cookbooks:
-    * `apt` cookbook provides means for updating the apt cache and adding package repositories if needed;
-    * `apache2` cookbook provides means for creating virtual hosts.
+* `apt` cookbook provides means for updating the apt cache and adding package repositories if needed;
+* `apache2` cookbook provides means for creating virtual hosts.
 
 There's also a custom cookbook named mytest.wrk, which actually installs the app.
 
