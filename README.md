@@ -21,6 +21,7 @@ How to keep the list of cookbooks short
 
 In general, use `package` resource to install software packages, for example, you can install php by simply adding
 this code to your recipe:
+
     package "php5" do
         action "install"
     end
